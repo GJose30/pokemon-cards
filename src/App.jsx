@@ -6,10 +6,13 @@ import {
   RiArrowLeftSLine,
   RiArrowRightSLine,
 } from "react-icons/ri";
+import Carousel from "./components/Carousel.jsx";
+import InfiniteCarousel from "./components/InfiniteCarousel.jsx";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
+      {/* Header */}
       <header className="flex px-10 py-10 justify-between items-center xl:w-[1200px] md:px-x-[700px] mx-auto w-full">
         <div>
           <nav className="text-xl text-gray-500 flex gap-x-14">
@@ -40,61 +43,37 @@ function App() {
           </div>
         </div>
       </header>
-      <main className="mt-36 ">
-        <div className="flex items-center justify-center relative">
-          <img
-            src="pokemon-cards/pokemon-card1.png"
-            className="opacity-50 w-56 h-72 shadow-2xl"
-          />
-          <img
-            src="pokemon-cards/pokemon-card2.png"
-            className="opacity-60 w-60 h-80 shadow-2xl"
-          />
-          <img
-            src="pokemon-cards/pokemon-card3.png"
-            className="w-64 h-96 shadow-2xl"
-          />
-          <img
-            src="pokemon-cards/pokemon-card4.png"
-            className="opacity-60 w-60 h-80 shadow-2xl"
-          />
-          <img
-            src="pokemon-cards/pokemon-card5.png"
-            className="opacity-50 w-56 h-72 shadow-2xl"
-          />
-          <div className="text-4xl absolute">
-            <RiArrowLeftSLine />
+      <main className="mt-24">
+        {/* Carousel */}
+        <Carousel />
+        {/* Titles */}
+        <div>
+          <div className="mt-3">
+            <h1 className="text-2xl text-gray-700 flex justify-center font-semibold">
+              CARD NAME
+            </h1>
           </div>
-          <div className="text-4xl absolute">
-            <RiArrowRightSLine />
+          <div className="mt-3">
+            <h1 className="text-xl text-gray-400 flex justify-center font-thin">
+              EXPANSIÓN PERTENECIENTE
+            </h1>
           </div>
-        </div>
-        <div className="mt-3">
-          <h1 className="text-2xl text-gray-700 flex justify-center font-semibold">
-            CARD NAME
-          </h1>
-        </div>
-        <div className="mt-3">
-          <h1 className="text-xl text-gray-400 flex justify-center font-thin">
-            EXPANSIÓN PERTENECIENTE
-          </h1>
         </div>
         <hr className="mt-6 h-4" />
-        <div className="mt-3">
+        {/* Expansions */}
+        <InfiniteCarousel />
+        {/* <div className="mt-3 ">
           <h1 className="text-3xl text-gray-600 flex justify-center font-thin">
             EXPANSIONS
           </h1>
           <div className="mt-6 flex items-center justify-center gap-x-36">
-            <img src="expansions/expansion1.png" className="w-80 h-56" />
-            <img src="expansions/expansion2.png" className="w-80 h-56" />
-            <img src="expansions/expansion3.png" className="w-80 h-56" />
+            <img src="expansions/expansion1.png" className="w-56 h-40 " />
+            <img src="expansions/expansion2.png" className="w-56 h-40" />
+            <img src="expansions/expansion3.png" className="w-56 h-40" />
           </div>
-        </div>
-        <div>
-          <h1>hola</h1>
-        </div>
+        </div> */}
       </main>
-
+      {/* Footer */}
       <footer class="bg-white dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div class="md:flex md:justify-between">

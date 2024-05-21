@@ -62,7 +62,7 @@ const SliderComponent = () => {
         >
           <img
             src={`pokemon-cards/pokemon-card${index + 1}.png`}
-            className="w-64 h-96 shadow-2xl"
+            className="w-64 h-96 shadow-2xl transform-gpu hover:scale-110 transition"
           />
         </div>
       ))}
